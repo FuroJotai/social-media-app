@@ -93,8 +93,8 @@ export default async function page({ params }: PageProps) {
                             </div>
 
                             {
-                             post?.comments.map((comment: Comment) => 
-                             <Comment name={comment.name} username={comment.username} text={comment.text}/>)       
+                             post?.comments.map((comment: Comment, index: number) => 
+                             <Comment key={index} name={comment.name} username={comment.username} text={comment.text}/>)       
 
                             }
                         </div>
